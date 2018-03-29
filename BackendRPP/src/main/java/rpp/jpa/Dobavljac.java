@@ -32,7 +32,7 @@ public class Dobavljac implements Serializable {
 
 	//bi-directional many-to-one association to Porudzbina
 	@OneToMany(mappedBy="dobavljac")
-	@JsonIgnore
+	@JsonIgnore //fasterxml jackson
 	private List<Porudzbina> porudzbinas;
 
 	public Dobavljac() {

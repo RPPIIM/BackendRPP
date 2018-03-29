@@ -30,7 +30,7 @@ public class Artikl implements Serializable {
 
 	//bi-directional many-to-one association to StavkaPorudzbine
 	@OneToMany(mappedBy="artikl")
-	@JsonIgnore
+	@JsonIgnore //fasterxml jackson
 	private List<StavkaPorudzbine> stavkaPorudzbines;
 
 	public Artikl() {

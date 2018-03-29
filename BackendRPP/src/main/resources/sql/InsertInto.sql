@@ -6,6 +6,8 @@ INSERT INTO "dobavljac"("id", "naziv", "adresa", "kontakt")
 VALUES(nextval('dobavljac_seq'), 'Fruit D.O.O.', 'Justina Popovica 3, 11080 Zemun, Beograd', '+381 11 3143 171');
 INSERT INTO "dobavljac"("id", "naziv", "adresa", "kontakt")
 VALUES(nextval('dobavljac_seq'), 'CENTROPROIZVOD', 'DOBANOVACKI PUT B.B. 11271, SURCIN', '+381 11 3773 600');
+INSERT INTO "dobavljac"("id", "naziv", "adresa", "kontakt")
+VALUES(-100, 'Test SOAPUI', 'Test Adresa', 'Test kontakt');
 
 INSERT INTO "artikl"("id", "naziv", "proizvodjac")
 VALUES(nextval('artikl_seq'), 'Moja Kravica sveže mleko 2,8% MM 1l', 'AD Imlek');
@@ -34,6 +36,8 @@ INSERT INTO "artikl"("id", "naziv", "proizvodjac")
 VALUES(nextval('artikl_seq'), 'Puding vanila', 'CENTROPROIZVOD');
 INSERT INTO "artikl"("id", "naziv", "proizvodjac")
 VALUES(nextval('artikl_seq'), 'Puding jagoda', 'CENTROPROIZVOD');
+INSERT INTO "artikl"("id", "naziv", "proizvodjac")
+VALUES(-100, 'Test SOAPUI', 'Test Proizvodjac');
 
 INSERT INTO "porudzbina"("id", "datum", "dobavljac", "isporuceno", "iznos", "placeno")
 VALUES (nextval('porudzbina_seq'), to_date('01.03.2017.', 'dd.mm.yyyy.'), 1, to_date('01.03.2017.', 'dd.mm.yyyy.'), 0, true);
@@ -45,6 +49,8 @@ INSERT INTO "porudzbina"("id", "datum", "dobavljac", "isporuceno", "iznos", "pla
 VALUES (nextval('porudzbina_seq'), to_date('11.02.2017.', 'dd.mm.yyyy.'), 4, to_date('04.03.2017.', 'dd.mm.yyyy.'), 0, true);
 INSERT INTO "porudzbina"("id", "datum", "dobavljac", "isporuceno", "iznos", "placeno")
 VALUES (nextval('porudzbina_seq'), to_date('01.03.2017.', 'dd.mm.yyyy.'), 4, to_date('03.03.2017.', 'dd.mm.yyyy.'), 0, false);
+INSERT INTO "porudzbina"("id", "datum", "dobavljac", "isporuceno", "iznos", "placeno")
+VALUES (-100, to_date('01.03.2017.', 'dd.mm.yyyy.'), 4, to_date('03.03.2017.', 'dd.mm.yyyy.'), 0, false);
 
 INSERT INTO "stavka_porudzbine"("id", "porudzbina", "redni_broj", "artikl", "kolicina", "jedinica_mere", "cena")
 VALUES (nextval('stavka_porudzbine_seq'), 1, 1, 1, 20, 'komad', 100);
@@ -78,3 +84,5 @@ INSERT INTO "stavka_porudzbine"("id", "porudzbina", "redni_broj", "artikl", "kol
 VALUES (nextval('stavka_porudzbine_seq'), 5, 1, 11, 10, 'kg', 300);
 INSERT INTO "stavka_porudzbine"("id", "porudzbina", "redni_broj", "artikl", "kolicina", "jedinica_mere", "cena")
 VALUES (nextval('stavka_porudzbine_seq'), 5, 2, 12, 10, 'kg', 500);
+INSERT INTO "stavka_porudzbine"("id", "porudzbina", "redni_broj", "artikl", "kolicina", "jedinica_mere", "cena")
+VALUES (-100, 5, 2, 12, 10, 'TEST', 500);
