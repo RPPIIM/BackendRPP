@@ -11,7 +11,7 @@ U browser-u otići na adresu **localhost:8080**
 Ukoliko je učitana početna stranica tomcat servera, server je uspešno instaliran, podešen i pokrenut.
 
 ## Kreiranje war fajla backend aplikacije  
-Modifikovati aplikaciju za kreiranje war fajla ([Vežbe 12](https://github.com/IIS/IIS1/commit/3ada60c3e100db2870f5c32af71433b430045a75))  
+Modifikovati aplikaciju za kreiranje war fajla ([Vežbe 12](https://github.com/RVAIIS/IIS1/commit/3ada60c3e100db2870f5c32af71433b430045a75))  
 Pokrenuti maven install (desni taster na projekat, run as -> maven install)  
 U oviru target foldera projekta kreiraće se fajl **backend.war**  
 
@@ -25,3 +25,4 @@ Kliknuti na Manager app, uneti username i password
 U delu deploy war file odabrati backend.war i kliknuti na deploy  
 Aplikacija je pokrenuta na adresi **localhost:8080/backend/**  
 (testirati npr. učitavanje artikala na adresi localhost:8080/backend/artikl) 
+
